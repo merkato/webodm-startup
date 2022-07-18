@@ -3,6 +3,7 @@
 ## Instalacja pakietów pomocniczych (narzędzia instalacji z zewnętrznych repo, python3 i git)
 
 sudo apt install apt-transport-https ca-certificates curl software-properties-common
+
 sudo apt install git python3 python3-pip
 
 ## Dodanie klucza publicznego repozytorium Docker Engine
@@ -16,11 +17,13 @@ echo "deb [arch=$(dpkg --print-architecture) signed-by=/usr/share/keyrings/docke
 ## Aktualizacja chache pakietów, następnie instalacja docker-ce i docker-compose
 
 sudo apt update
+
 sudo apt install docker-ce docker-compose
 
 ## Dodanie bieżącego użytkownika do grupy docker, aby miał on pełne uprawnienia do kontenerów.
 
 sudo usermod -aG docker $USER
+
 su - ${USER}
 
 ## Sprawdzamy czy docker jest działający i gotowy do uruchomienia WebODM
@@ -33,6 +36,7 @@ sudo systemctl status docker
 ## Krok 1 - pobieramy z repo github (tylko raz)
 
 git clone https://github.com/OpenDroneMap/WebODM --config core.autocrlf=input --depth 1
+
 cd WebODM
 
 ## Krok 2 - startujemy kontenery, pobiorą się i zaktualizują. Ta operacja każdy raz po restarcie serwera.
@@ -42,7 +46,10 @@ cd WebODM
 ## Krok 2a - aktualizacja
 
 ./webodm.sh stop
+
 ./webodm.sh update
+
+./webodm.sh start
 
 ## Krok 3 - certyfikat SSL (opcjonalny)
 
