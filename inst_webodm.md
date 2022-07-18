@@ -31,7 +31,7 @@ git clone https://github.com/OpenDroneMap/WebODM --config core.autocrlf=input --
 cd WebODM
 
 # Krok 2 - startujemy kontenery, pobiorą się i zaktualizują. Ta operacja każdy raz po restarcie serwera.
-./webodm.sh start 
+./webodm.sh start
 
 # Krok 2a - aktualizacja
 ./webodm.sh stop
@@ -40,4 +40,4 @@ cd WebODM
 # Krok 3 - certyfikat SSL (opcjonalny)
 Konieczne jest wcześniejsze dodanie rekordu DNS dla wskazanego IP, następnie
 
-./webodm.sh restart --ssl --hostname adreswebodm.polsl.pl 
+./webodm.sh restart --ssl --hostname adreswebodm.polsl.pl
