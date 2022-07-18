@@ -42,7 +42,7 @@ cd WebODM
 ## Krok 2a - aktualizacja
 
 ./webodm.sh stop
-./weodm.sh update
+./webodm.sh update
 
 ## Krok 3 - certyfikat SSL (opcjonalny)
 
