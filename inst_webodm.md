@@ -35,6 +35,12 @@ sudo systemctl status docker
 
 ## Krok 1 - pobieramy z repo github (tylko raz)
 
+### Dodatkowy katalog
+
+mkdir dane
+cd dane
+
+
 git clone https://github.com/OpenDroneMap/WebODM --config core.autocrlf=input --depth 1
 
 cd WebODM
