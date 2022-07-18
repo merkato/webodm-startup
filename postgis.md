@@ -19,10 +19,13 @@ sudo systemctl restart postgresql
 ## Stworzenie uzytkownika i bazy danych
 
 sudo -i -u postgres
-
+--
 createuser msitek
-
 createdb gisarch -O msitek
-psql -d gisarch
 
+### W konsoli psql
+
+psql -d gisarch
+--
+alter user <username> with encrypted password '<password>';
 CREATE EXTENSION postgis;
